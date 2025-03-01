@@ -7,16 +7,16 @@ public class CadastroAluno {
         // Criação de um objeto Scanner para capturar dados do usuário
         try (Scanner sc = new Scanner(System.in)) {
             // Coleta de dados gerais do aluno
-            System.out.print("Digite o nome do aluno: ");
+            System.out.print("insira o nome do aluno: ");
             String nome = sc.nextLine();
-            System.out.print("Digite a idade do aluno: ");
+            System.out.print("insira a idade do aluno: ");
             int idade = sc.nextInt();
-            System.out.print("Digite a nota do aluno: ");
+            System.out.print("insira a nota do aluno: ");
             double nota = sc.nextDouble();
             sc.nextLine(); // Consumir a linha em branco após o nextInt() ou nextDouble()
 
             // Coleta do tipo de curso (Graduação ou Técnico)
-            System.out.print("Digite o tipo de curso (1 para Graduação, 2 para Técnico): ");
+            System.out.print("insira o tipo de curso (1 para Graduação, 2 para Técnico): ");
             int tipoCurso = sc.nextInt();
             sc.nextLine();  // Consumir a linha em branco após o nextInt()
 
@@ -34,13 +34,13 @@ public class CadastroAluno {
             // Processa o cadastro dependendo do tipo de curso
             if (tipoCurso == 1) {
                 // Cadastro de aluno de graduação
-                System.out.print("Digite o curso de graduação: ");
+                System.out.print("insira o curso de graduação: ");
                 String curso = sc.nextLine();
                 AlunoGraduacao alunoGraduacao = new AlunoGraduacao(nome, idade, nota, curso);
                 alunoGraduacao.exibirDados();  // Exibe os dados do aluno de graduação
             } else if (tipoCurso == 2) {
                 // Cadastro de aluno técnico
-                System.out.print("Digite a modalidade do curso técnico: ");
+                System.out.print("insira a modalidade do curso técnico: ");
                 String modalidade = sc.nextLine();
                 AlunoTecnico alunoTecnico = new AlunoTecnico(nome, idade, nota, modalidade);
                 alunoTecnico.exibirDados();  // Exibe os dados do aluno técnico
